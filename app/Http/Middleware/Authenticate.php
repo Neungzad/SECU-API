@@ -6,6 +6,7 @@ use Closure;
 use Illuminate\Contracts\Auth\Factory as Auth;
 use App\User;
 use Illuminate\Http\Response;
+use Illuminate\Contracts\Auth\Guard;
 
 class Authenticate
 {
@@ -37,15 +38,13 @@ class Authenticate
      */
     public function handle($request, Closure $next, $guard = null)
     {
-        $token = $request->input('token');
+        $token = app('request')->header('token');
         $users = User::where('token', '=' , $token)->get();
 
         if (count($users) < 1) {
             return response(json_encode(["success" => false , "msg" => 'Unauthorized permission.']), 401);
         }
-//        if ($this->auth->guard($guard)->guest()) {
-//            return response('Unauthorized.', 401);
-//        }
+
         return $next($request);
     }
 }
