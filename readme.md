@@ -15,7 +15,7 @@ SECU-API is api for course management system that include course, question, comp
 
 ## Getting Started
 
-###[ Wiki การเริ่มต้นการใช้งาน และแนวทางพัฒนาอย่างละเอียด] (https://github.com/Neungzad/SECU-API/wiki/Getting-Started)
+###[ Wiki การเริ่มต้นการใช้งาน และแนวทางพัฒนาอย่างละเอียด] (https://github.com/Neungzad/SECU-API/wiki)
 
 **หมายเหตุ:** 
 - ต้องการ PHP 5.5.9 ขึ้นไป
